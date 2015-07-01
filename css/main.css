@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+}
+
+div.main {
+    background-color: white;
+    width: 100%;
+    min-width: 1200px;
+    min-height: 500px;
+    margin-top: 10ex;
+}
+
+.centerarea img {
+    margin-left: 5%;
+}
+
+#rthrow,
+#rcool,
+#rready,
+#hadouken,
+#techexp {
+    display: none;
+}
+
+#hadouken {
+    width: 156px;
+    height: 90px;
+    float: left;
+    position: absolute;
+    top: 250px;
+    left: 520px;
+    z-index: 10;
+}
+
+#techexp {
+    width: 15%;
+    float: right;
+    margin-right: 20px;
+    text-align: justify;
+}
