@@ -1,18 +1,16 @@
 $(function(){
-    $("#hadouken-sound")[0].load();
     $(".ryu").mouseover(function() {
+	$(".fighting").hide();
 	$("#rready").show();
-	$("#rstill").hide();
-	/*alert('mouseenter event firing');*/
     })
     .mouseleave(function() {
+	$(".fighting").hide();
 	$("#rstill").show();
-	$("#rready").hide();
     })
     
 	.mousedown(function(){
 	    playHadouken();
-	    $("#rready").hide();
+	    $(".fighting").hide();
 	    $("#rthrow").show();
 	    $("#hadouken").finish().show().animate(
 		{"left": "1020px"},
@@ -24,8 +22,8 @@ $(function(){
 	);
     })
     .mouseup(function(){
+	$(".fighting").hide();
 	$("#rready").show();
-	$("#rthrow").hide();
     });
 
 
@@ -37,14 +35,15 @@ $(function(){
     })
 	.keyup(function(event){
 	    if (event.which == 88){
-		$(".showoff").hide();
+		$(".fighting").hide();
 		$("#rstill").show();
 	    }
 	})
 })
 
 function playHadouken () {
+    
     $("#hadouken-sound")[0].volume = 0.5;
-
+    $("#hadouken-sound")[0].load();
     $("#hadouken-sound")[0].play();
 }
